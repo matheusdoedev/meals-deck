@@ -2,6 +2,8 @@ export default {
   colors: {
     primary: "#D95204",
     white: "#FFFFFF",
+    black: "#222222",
+    gray: "#E1E1E1",
   },
   fontFamily: {
     poppinsRegular: "PoppinsRegular",
