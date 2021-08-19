@@ -1,24 +1,32 @@
-import React, { ReactElement } from "react";
-import { View, Image } from "react-native";
+import React, { ReactElement, useRef, useCallback } from 'react';
 
-import { Input, Button } from "~/components";
-import { MealsDeckLogo } from "~/assets/icons";
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
-import { styles } from "./styles";
+import { Input, Button, TextLink } from '~/components';
+import { AuthLayout } from '~/layouts';
+import { RouteStackParamList } from '~/models/Routes';
 
-function SignIn({ navigation }): ReactElement {
+type signInScreenProp = StackNavigationProp<RouteStackParamList, 'Home'>;
+
+function SignIn(): ReactElement {
+  const navigation = useNavigation<signInScreenProp>();
+
+  const buttonStyle = useRef({
+    marginBottom: 24,
+  });
+
+  const handleNavigateToSignUp = useCallback(() => {
+    navigation.push('SignUp');
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Image
-        style={styles.logo}
-        source={MealsDeckLogo}
-        width={159}
-        height={80}
-      />
+    <AuthLayout>
       <Input label="Username" />
-      <Input label="Senha" />
-      <Button content="Sign in" />
-    </View>
+      <Input label="Password" />
+      <Button content="Enter" containerStyle={buttonStyle.current} />
+      <TextLink content="Create a account" onPress={handleNavigateToSignUp} />
+    </AuthLayout>
   );
 }
 
