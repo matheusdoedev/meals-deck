@@ -2,9 +2,10 @@ import React, { ReactElement } from "react";
 
 import { createStackNavigator } from "@react-navigation/stack";
 
+import { RouteStackParamList } from "../models/Routes";
 import { Home, SignIn, SignUp } from "../screens";
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RouteStackParamList>();
 
 function AppRoutes(): ReactElement {
   return (
