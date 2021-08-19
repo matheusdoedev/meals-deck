@@ -1,13 +1,13 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import light from "../../styles/theme/light";
+import light from '~/styles/theme/light';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: "100%",
-    height: "100%",
-    justifyContent: "center",
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
   },
 
   content: {
@@ -38,18 +38,7 @@ export const styles = StyleSheet.create({
     height: 1,
     backgroundColor: light.colors.white,
     opacity: 0.2,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginVertical: 24,
-  },
-
-  link: {
-    alignItems: "center",
-  },
-
-  linkText: {
-    color: light.colors.primary,
-    textDecorationLine: "underline",
-    fontSize: 14,
-    fontFamily: light.fontFamily.poppinsRegular,
   },
 });
