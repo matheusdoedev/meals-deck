@@ -22,8 +22,16 @@ function SignIn(): ReactElement {
 
   return (
     <AuthLayout>
-      <Input label="Username" />
-      <Input label="Password" />
+      <Input
+        label="E-mail"
+        placeholder="Enter your e-mail"
+        setValue={() => {}}
+      />
+      <Input
+        label="Password"
+        placeholder="Enter your password"
+        setValue={() => {}}
+      />
       <Button content="Enter" containerStyle={buttonStyle.current} />
       <TextLink content="Create a account" onPress={handleNavigateToSignUp} />
     </AuthLayout>

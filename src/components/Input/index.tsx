@@ -1,13 +1,13 @@
-import React, { ReactElement, useCallback } from "react";
+import React, { ReactElement, useCallback } from 'react';
 import {
   View,
   Text,
   TextInput,
   TextInputProps,
   StyleSheetProperties,
-} from "react-native";
+} from 'react-native';
 
-import { styles } from "./styles";
+import { styles } from './styles';
 
 interface IInputProps extends TextInputProps {
   label?: string;
