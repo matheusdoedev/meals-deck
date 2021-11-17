@@ -17,7 +17,7 @@ function SignUp(): ReactElement {
   });
 
   const handleSubmitSignUp = useCallback(() => {
-    navigation.push('SignUp');
+    navigation.push('UserIndex');
   }, []);
 
   return (
@@ -42,7 +42,11 @@ function SignUp(): ReactElement {
         placeholder="Confirm your password"
         setValue={() => {}}
       />
-      <Button content="Confirm" containerStyle={buttonStyle.current} />
+      <Button
+        content="Confirm"
+        containerStyle={buttonStyle.current}
+        onPress={handleSubmitSignUp}
+      />
     </AuthLayout>
   );
 }

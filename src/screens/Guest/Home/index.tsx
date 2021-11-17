@@ -10,10 +10,10 @@ import { RouteStackParamList } from '~/models/Routes';
 
 import { styles } from './styles';
 
-type homeScreenProp = StackNavigationProp<RouteStackParamList, 'Home'>;
+type HomeScreenProp = StackNavigationProp<RouteStackParamList, 'Home'>;
 
 function Home(): ReactElement {
-  const navigation = useNavigation<homeScreenProp>();
+  const navigation = useNavigation<HomeScreenProp>();
 
   const handleNavigateToSignUp = useCallback(() => {
     navigation.push('SignUp');

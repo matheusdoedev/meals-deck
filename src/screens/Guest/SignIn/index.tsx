@@ -17,7 +17,7 @@ function SignIn(): ReactElement {
   });
 
   const handleNavigateToSignUp = useCallback(() => {
-    navigation.push('SignUp');
+    navigation.push('UserIndex');
   }, []);
 
   return (
