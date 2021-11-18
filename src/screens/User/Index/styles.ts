@@ -10,6 +10,21 @@ export const styles = StyleSheet.create({
   },
 
   mealsListWrapper: {
-    maxHeight: 138,
+    maxHeight: 300,
+  },
+
+  mealsList: {
+    flexWrap: 'wrap',
+  },
+
+  mealItem: {
+    maxWidth: 130,
+    width: '100%',
+  },
+
+  mealCover: {
+    width: 130,
+    maxHeight: 130,
+    borderRadius: 5,
   },
 });
