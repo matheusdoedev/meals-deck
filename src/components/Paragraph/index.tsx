@@ -3,17 +3,21 @@ import { Text, TextProps, TextStyle } from 'react-native';
 
 import { styles } from './styles';
 
-interface ITitleProps extends Omit<TextProps, 'style'> {
+interface IParagraphProps extends Omit<TextProps, 'style'> {
   children: ReactNode;
   extraStyles?: TextStyle;
 }
 
-function Title({ children, extraStyles, ...rest }: ITitleProps): ReactElement {
+function Paragraph({
+  children,
+  extraStyles,
+  ...rest
+}: IParagraphProps): ReactElement {
   return (
-    <Text style={{ ...styles.title, ...extraStyles }} {...rest}>
+    <Text style={{ ...styles.paragraph, ...extraStyles }} {...rest}>
       {children}
     </Text>
   );
 }
 
-export default Title;
+export default Paragraph;
